@@ -1,15 +1,21 @@
 'use strict';
 
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+
 var _net = require('net');
 
 var _tls = require('tls');
 
 var _fs = require('fs');
 
+var _path = require('path');
+
+var path = _interopRequireWildcard(_path);
+
 // Read cert and key
 var tlsOptions = {
-  key: (0, _fs.readFileSync)('key.pem'),
-  cert: (0, _fs.readFileSync)('cert.pem')
+  key: (0, _fs.readFileSync)(path.resolve(__dirname, '../key.pem')),
+  cert: (0, _fs.readFileSync)(path.resolve(__dirname, '../cert.pem'))
 };
 
 // 'Connection' event handler
