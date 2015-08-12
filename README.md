@@ -19,7 +19,7 @@ Generating unsigned certificate.
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
 ```
 
-## Connecting thourgh telnet to unsecure server
+## Connecting with telnet to unsecure server
 Replace your-address with server address. If server is running on your machine,
 use localhost.
 
@@ -27,7 +27,7 @@ use localhost.
 telnet your-address 1337
 ```
 
-## Connecting thourgh telnet to secure server
+## Connecting with telnet to secure server
 Replace your-address with server address. If server is running on your machine,
 use localhost.
 
