@@ -1,0 +1,31 @@
+{
+  "name": "websockets-echo",
+  "version": "0.1.0",
+  "description": "WebSockets project for testing purposes. It simply echos your request",
+  "main": "dist/server.js",
+  "scripts": {
+    "start" : "node ./dist/server.js",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benno208/websockets-echo.git"
+  },
+  "keywords": [
+    "websockets",
+    "echo",
+    "net",
+    "tls"
+  ],
+  "author": "Florian Dreschner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benno208/websockets-echo/issues"
+  },
+  "homepage": "https://github.com/benno208/websockets-echo#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-nodemon": "^2.0.3"
+  }
+}
