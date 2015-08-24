@@ -10,7 +10,7 @@ gulp.task('transpile', function () {
   .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', function () {
+gulp.task('nodemon', function () {
   nodemon({
     script: 'dist/server.js'
     , ext: 'js'
@@ -18,4 +18,6 @@ gulp.task('default', function () {
     , tasks : ['transpile']
     , env: { 'NODE_ENV': 'development' }
   })
-})
+});
+
+gulp.task('default', ['transpile', 'nodemon']);

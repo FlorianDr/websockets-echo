@@ -3,12 +3,12 @@
 import {Socket, createServer} from 'net';
 import {TLSSocket, createServer as createTLSServer} from 'tls';
 import {readFileSync} from 'fs';
-import * as path from 'path';
+import path from 'path';
 
 // Read cert and key
 let tlsOptions = {
-  key : readFileSync(path.resolve(__dirname, '../key.pem')),
-  cert : readFileSync(path.resolve(__dirname, '../cert.pem'))
+  key : readFileSync(path.resolve(__dirname, '../server-key.pem')),
+  cert : readFileSync(path.resolve(__dirname, '../server-cert.pem'))
 };
 
 // 'Connection' event handler
